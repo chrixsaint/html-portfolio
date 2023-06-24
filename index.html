@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: row;
+    }
+    @media(min-width: 0px) and (max-width: 375px){
+      .container{
+        flex-direction: column;
+      }
+    }
+    @media(min-width: 376px) and (max-width: 570px){
+      .container{
+        flex-direction: column;
+      }
+    }
+    @media(min-width: 571px) and (max-width: 719px){
+      .container{
+        flex-direction: row;
+      }
+    }
+    @media(min-width:719px){
+      .container{
+        flex-direction: column;
+      }
+    }
+    @media(min-width: 870px){
+      .container{
+        flex-direction: row;
+      }
+    }
+
+    .border{
+      border-radius: 10px;
+      width: 150px;
+      height: 200px;
+      padding: 10px;
+      
+    }
+    .sky{
+      height: 300px;
+      width: 200px;
+      padding: 20px;
+      background: #4554A4;
+      background: -moz-linear-gradient(left, #4554A4 0%, #07C4CB 82%, #4A0B75 100%);
+      background: -webkit-linear-gradient(left, #4554A4 0%, #07C4CB 82%, #4A0B75 100%);
+      background: linear-gradient(to right, #4554A4 0%, #07C4CB 82%, #4A0B75 100%);
+    }
+    .run{
+      height: 300px;
+      width: 200px;
+      padding: 20px;
+      background: #eff0ef;
+      background: -moz-linear-gradient(left, #fdfffd 0%, #f7f3f3 82%, #f5f8f7 100%);
+      background: -webkit-linear-gradient(left, #eff1ef 0%, #f7f4f4 82%, #f7fbfa 100%);
+      background: linear-gradient(to right, #f2f4f2 0%, #fcfafa 82%, #f6f7f7 100%);
+    }
+    .fred{
+      display: flex;
+      list-style: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      margin-top: -22px;
+    }
+    img{
+      position: relative;
+      top: 10px;
+    }
+    button{
+      background-color: blue;
+    border-radius: 100px;
+    width: 165px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    margin-top: 12px;
+    position: relative;
+    color: white;
+    left: 19px;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%);
+    }
+    h2,p{
+      text-align: center;
+      color: white;
+    }
+    .first{
+      border-radius: 100%;
+      height: 100px;
+      width: 100px;
+      background: #0076A4;
+     background: -moz-linear-gradient(-45deg, #0076A4 0%, #433ECB 82%, #000575 100%);
+     background: -webkit-linear-gradient(-45deg, #0076A4 0%, #433ECB 82%, #000575 100%);
+     background: linear-gradient(135deg, #0076A4 0%, #433ECB 82%, #000575 100%);
+    }
+    .radius{
+     border-radius: 15px;
+    }
+    .close{
+     
+    }
+  </style>
+</head>
+<body>
+
+  <!--
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    76
+  of 100
+
+  Great
+  You scored higher than 65% of the people who have taken these tests.
+  
+  Summary
+
+  Reaction
+  80 / 100
+
+  Memory
+  92 / 100
+
+  Verbal
+  61 / 100
+
+  Visual
+  72 / 100
+
+  Continue
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <div class="container">
+    <div class="radius sky">
+      <p>Your Result</p>
+      <div class="first" style="border-radius: 100%; height: 100px; width: 100px; text-align: center; position: relative; left: 49px;"><p style="position: relative; top: 16px;"><span style="font-size: 36px;">76</span><br>of 100</p></div>
+      <h2>Great</h2>
+      <p>You scored higher than 65% of the people who have taken these tests.</p>
+    </div>
+  <div class="radius run">
+    <h1 style="font-family: Georgia, serif; font-size: medium;">Summary</h1>
+    <dl class="fred">
+      <dt  style="color: red; margin: 7px;"><img src="./assets/images/favicon-32x32.png" alt="favicon-32x32.png">Reaction <span style="margin-left: 18px;">80 / 100</span></dt>
+      <dt style="color: rgb(200, 255, 0); margin: 7px;"><img src="./assets/images/icon-memory.svg" alt="icon-memory.svg">Memory <span style="margin-left: 30px;">92 / 100</span></dt>
+      <dt style="color: rgb(0, 255, 21); margin: 7px;"><img src="./assets/images/icon-verbal.svg" alt="icon-verbal.svg">Verbal <span style="margin-left: 43px;">61 / 100</span></dt>
+      <dt style="color: rgb(34, 0, 255); margin: 7px;"><img src="./assets/images/icon-visual.svg" alt="icon-visual.svg">Visual <span style="margin-left: 43px;">72 / 100</span></dt>
+    </dl>
+    <button>Continue</button>
+  </div>
+  </div>
+</body>
+</html>
